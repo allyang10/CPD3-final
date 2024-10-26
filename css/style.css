@@ -1,0 +1,242 @@
+
+
+/* Default styles */
+*{
+  margin: .5em; 
+  padding: .6em;
+  font-size: 1.vw;
+  text-align: center;
+  overflow: scroll;
+  white-space: nowrap;
+  font-family:'Trebuchet MS', sans-serif;
+}
+
+nav{
+  position: sticky;      /* Make the navbar sticky */
+  top: 0;                /* Stick to the top */
+  z-index: 1000;        /* Ensure it stays above other content */
+  background-color: rgb(179, 223, 223); /* Background color */
+  width: 100%; /* Ensure full width */
+  height: 60%;         /* Set a height for the navbar */
+}
+
+/* link button styles */
+nav ul{
+  display: flex;
+  list-style-type: none; /* Remove bullet points */
+  background-color: rgb(179, 223, 223);
+  border: 2px black;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+a {
+  color: black;
+  text-decoration:none;
+  box-shadow: 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid;
+  border-radius: 6px;
+  background-color: rgb(195, 98, 59);
+  font-size: 2vw;
+
+  /* responsive padding */
+  padding: 1% 4%; /* Adjust for smaller devices */
+  margin: 1%;
+  display: inline-block; /* Ensure it only takes up space for content */
+}
+
+
+h1, h2{
+  font-size: 80%;
+}
+
+#individual-results h2 {
+  flex: 0 0 100%;
+}
+
+/* style the summary */
+#summary #athlete{
+  display: inline; /* Keeps it inline like a regular paragraph */
+  background: none; /* Remove background if any */
+  border: none; /* Remove border if any */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  white-space:normal;
+  overflow: visible;
+}
+
+#summary p{
+  font-size: 1vw;
+  white-space:normal;
+  overflow: visible;
+  text-align: left;   /* Align text to the left for better readability */
+}
+
+/* make the table flex and style */
+#team-results{
+  display: flex;
+  background-color: rgb(179, 223, 223);
+  border: solid, black, 2px;
+  flex-direction: column;
+  border-collapse: collapse;
+}
+
+
+/* center the text in the table */
+tr:nth-child(even){
+  background-color: rgb(195, 98, 59);
+}
+
+/* make individual results into a grid */
+#individual-results{
+  display: flex; /* Make the section a flex container */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  justify-content: space-between; /* Space items evenly */
+  grid-template-columns: 1fr; /* One card per row */
+}
+
+/* Style the individual results */
+.athlete-id {
+  gap: 1em; /* Add gap between cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  border-radius: 8px; /* Optional rounded corners */
+  background-color: white; /* Ensure a solid background */
+  padding: 10px; /* Add some padding */
+  font-size: 1.8vw;
+}
+
+.athlete-id figure img {
+  max-width: 100%; /* Allow image to scale within its container */
+  width: 150%; /* Default size on larger screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+dl {
+  display: flex; /* Make the <dl> a flex container */
+  margin: 0 0 0 1em; /* Space on the left of the description list */
+}
+
+
+
+#gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax value for larger images */
+  gap: 10px;
+}
+
+#gallery h2 {
+  grid-column: 1 / -1;  /* Make the title span across all columns */
+  margin-bottom: 20px;  /* Add some space below the title */
+  font-size: 2em;       /* Make the title larger */
+}
+
+/* Animate for images */
+#gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* hover animation */
+  object-fit: contain; /* Ensure the entire image is visible */
+  display: block;
+}
+
+/* animation for when hovering */
+#gallery a:hover {
+  transform: scale(1.5); /* Makes the image 2.5x bigger on hover */
+}
+
+
+
+/* Exclude links in the gallery */
+#gallery a {
+  box-shadow: none; /* Remove box-shadow */
+  border: none; /* Remove border */
+  background-color: transparent; /* Remove background */
+  color: inherit; /* Use inherited color */
+  text-decoration: none; /* Ensure no underline */
+}
+
+/* Focus state for links and buttons */
+a:focus{
+  outline: 3px solid rgb(255, 255, 255); /* Dashed outline for visibility */
+  outline-offset: 5px; /* Space between outline and element */
+  background-color: rgba(0, 123, 255, 0.1); /* Subtle background highlight */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Soft glow effect */
+}
+
+/* Focus state for gallery images */
+#gallery a:focus {
+  outline: none;  
+  transform: scale(1.5); /* Makes the image 2.5x bigger on hover */
+}
+
+/* Hover state to complement focus */
+a:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Add hover effect */
+}
+
+/* Tablet styles */
+@media (min-width: 600px) {
+  *{
+    font-size: 100%; /*max font size */
+  }
+
+  h1,h2{
+    font-size: 70%;
+  }
+
+  a{
+    font-size: 2vw; /*bigger*/
+  }
+  
+  nav ul {
+    flex-direction: row; /* Change to row on larger screens */
+    justify-content: center; /* Center navigation items */
+  }
+
+  .athlete-id {
+    max-width: 50%;
+    font-size: .5em;
+    flex: 1 1 calc(50% - 1em); /* Two cards per row */
+  }
+
+  dl{
+   font-size: .5em;
+  }
+
+  .athlete-id figure img {
+    max-width: 80%; /* Allow image to scale within its container */
+    width: 100%; /* Default size on larger screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+}
+/* Desktop styles */
+@media (min-width: 900px) {
+
+  h1 {
+      font-size: 2.2em; /* Larger heading on larger screens */
+  }
+
+  h2 {
+      font-size: 2em; /* Larger subheading */
+  }
+
+  nav ul li {
+      margin: 0 1em; /* Horizontal margin for navigation items */
+  }
+
+  .athlete-id {
+    font-size: 2vw;
+    flex: 1 1 calc(33.33% - 1em); /* Three cards per row */
+  }
+}
+
+/* changes for prefers-reduced-motion */
+@media screen and (prefers-reduced-motion: reduce) {  
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.000ms !important;
+  }
+}
