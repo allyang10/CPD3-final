@@ -54,6 +54,8 @@ h1, h2{
   flex: 0 0 100%;
 }
 
+
+
 /* style the summary */
 #summary #athlete{
   display: inline; /* Keeps it inline like a regular paragraph */
@@ -93,6 +95,13 @@ tr:nth-child(even){
   flex-wrap: wrap; /* Allow items to wrap onto the next line */
   justify-content: space-between; /* Space items evenly */
   grid-template-columns: 1fr; /* One card per row */
+}
+
+.athlete-id:hover,
+.athlete-id:focus{
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Style the individual results */
@@ -186,7 +195,7 @@ a:hover {
   }
 
   a{
-    font-size: 2vw; /*bigger*/
+    font-size: 1.5vw; /*bigger*/
   }
   
   nav ul {

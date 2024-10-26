@@ -93,9 +93,9 @@ def csv_to_html(csv_filename, output_folder):
 
                 # Add the athlete div
                 html_content += f"""
-<div class="athlete-id">
+<div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/{profile_pic}" width="200" alt="Profile picture of {name}"> 
+    <img src="../images/profiles/{profile_pic}" width="200" alt="Profile of {name}"> 
     <figcaption>{name}</figcaption>
 </figure>
 <dl>
