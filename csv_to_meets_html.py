@@ -104,12 +104,13 @@ def csv_to_html(csv_filename, output_folder):
 <figure> 
     <img src="../images/profiles/{profile_pic}" width="200" alt="Profile of {name}"> 
     <figcaption>{name}</figcaption>
-</figure>
+</figure> <div class="card-back">
 <dl>
     <dt>Place:</dt><dd>{place}</dd>
     <dt>Time:</dt><dd>{time}</dd>
     <dt>Grade:</dt><dd>{grade}</dd>
 </dl>
+</div>
 </div>
 """
 

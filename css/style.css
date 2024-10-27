@@ -93,23 +93,43 @@ tr:nth-child(even){
   flex-wrap: wrap; /* Allow items to wrap onto the next line */
   justify-content: space-between; /* Space items evenly */
   grid-template-columns: 1fr; /* One card per row */
+  transition: opacity 0.6s ease; /* Smooth transition for fade effect */
 }
 
-#individual-results:focus{
-  outline: none;
+.card-back{
+  position: absolute; /* Position it over the front */
+  opacity: 0; /* Hide the back initially */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  display: none; /* Hide the back by default */
 }
 
 /* hover and focus styling for the athlete cards */
 .athlete-id:hover,
-.athlete-id:focus{
+.athlete-id:focus,
+.card-back{
   outline: none;
+  display: block; /* Show the back on hover */
   transform: scale(1.05);
+  top: 40%; /* Align to middle */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transform: rotateY(10deg) rotateX(10deg);
+  transition: opacity 0.6s ease; /* Smooth transition for fade effect */
+}
+
+/* Show the back on hover or focus */
+.athlete-id:hover .card-back,
+.athlete-id:focus .card-back {
+    opacity: 1; /* Make it fully visible */
+}
+
+.athlete-id:hover figure,
+.athlete-id:focus figure {
+    opacity: 0; /* Hide the front on hover */
+    transform: rotateY(180deg); /* Rotate the front */
 }
 
 /* Style the individual results */
 .athlete-id {
+  perspective: 1000px; /* Allow for 3D perspective */
   gap: 1em; /* Add gap between cards */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
   border-radius: 8px; /* Optional rounded corners */
@@ -285,7 +305,7 @@ body.dark-mode button:hover{
 /* changes for prefers-reduced-motion */
 @media screen and (prefers-reduced-motion: reduce) {  
   * {
-    animation-duration: 0.001ms !important;
+    animation-duration: 0.000ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.000ms !important;
   }
