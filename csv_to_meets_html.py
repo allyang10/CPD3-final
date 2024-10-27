@@ -34,6 +34,13 @@ def csv_to_html(csv_filename, output_folder):
 </head>
    <body>
    <a href = "#main">Skip to Main Content</a>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+    function toggleDarkMode() {{
+    document.body.classList.toggle('dark-mode');
+    }}
+    </script>
    <nav>
      <ul>
         <li><a href="index.html">Home Page</a></li>
@@ -64,7 +71,7 @@ def csv_to_html(csv_filename, output_folder):
         <h2>Team Results</h2>"""
 
         # Process the remaining rows (after the first five)
-        html_content += """<table>\n"""
+        html_content += """<table><section id = "team-results-table">\n"""
         table_start = True
 
         for row in rows[4:]:
@@ -80,7 +87,7 @@ def csv_to_html(csv_filename, output_folder):
             elif len(row) == 8 and row[5].strip().lower() == 'ann arbor skyline':
                 if table_start == True:
                     table_start = False
-                    html_content += "</table>\n"
+                    html_content += "</table></section>\n"
                     html_content += """</section>\n
                     <section id="individual-results">\n
                     <h2>Individual Results</h2>"""

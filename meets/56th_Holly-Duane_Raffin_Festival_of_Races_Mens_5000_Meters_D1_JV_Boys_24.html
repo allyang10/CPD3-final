@@ -10,6 +10,13 @@
 </head>
    <body>
    <a href = "#main">Skip to Main Content</a>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+    function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    }
+    </script>
    <nav>
      <ul>
         <li><a href="index.html">Home Page</a></li>
@@ -34,7 +41,7 @@
     </section>
 <section id="team-results">
 
-        <h2>Team Results</h2><table>
+        <h2>Team Results</h2><table><section id = "team-results-table">
 <tr><th>Place</th><th>Team</th><th>Score</th></tr>
 <tr><td>1</td><td>Holly</td><td> 43</td></tr>
 <tr><td>2</td><td>Salem</td><td> 52</td></tr>
@@ -56,7 +63,7 @@
 <tr><td>18</td><td>Utica Eisenhower</td><td> 527</td></tr>
 <tr><td>19</td><td>Davison</td><td> 580</td></tr>
 <tr><td>20</td><td>Lake Orion</td><td> 581</td></tr>
-</table>
+</table></section>
 </section>
 
                     <section id="individual-results">
@@ -64,7 +71,7 @@
                     <h2>Individual Results</h2>
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23349698.jpg" width="200" alt="Profile picture of Oskar MacArthur"> 
+    <img src="../images/profiles/23349698.jpg" width="200" alt="Profile of Oskar MacArthur"> 
     <figcaption>Oskar MacArthur</figcaption>
 </figure>
 <dl>
@@ -76,7 +83,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/19203161.jpg" width="200" alt="Profile picture of Martin Gehrke"> 
+    <img src="../images/profiles/19203161.jpg" width="200" alt="Profile of Martin Gehrke"> 
     <figcaption>Martin Gehrke</figcaption>
 </figure>
 <dl>
@@ -88,7 +95,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23349680.jpg" width="200" alt="Profile picture of Dylan Hanley"> 
+    <img src="../images/profiles/23349680.jpg" width="200" alt="Profile of Dylan Hanley"> 
     <figcaption>Dylan Hanley</figcaption>
 </figure>
 <dl>
@@ -100,7 +107,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/18820257.jpg" width="200" alt="Profile picture of Parker Razelun"> 
+    <img src="../images/profiles/18820257.jpg" width="200" alt="Profile of Parker Razelun"> 
     <figcaption>Parker Razelun</figcaption>
 </figure>
 <dl>
@@ -112,7 +119,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23821078.jpg" width="200" alt="Profile picture of Santiago Valenzuela"> 
+    <img src="../images/profiles/23821078.jpg" width="200" alt="Profile of Santiago Valenzuela"> 
     <figcaption>Santiago Valenzuela</figcaption>
 </figure>
 <dl>
@@ -124,7 +131,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23564875.jpg" width="200" alt="Profile picture of Raphael Fournier"> 
+    <img src="../images/profiles/23564875.jpg" width="200" alt="Profile of Raphael Fournier"> 
     <figcaption>Raphael Fournier</figcaption>
 </figure>
 <dl>
@@ -136,7 +143,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/25989957.jpg" width="200" alt="Profile picture of Roman Stilwell"> 
+    <img src="../images/profiles/25989957.jpg" width="200" alt="Profile of Roman Stilwell"> 
     <figcaption>Roman Stilwell</figcaption>
 </figure>
 <dl>
@@ -148,7 +155,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/22288700.jpg" width="200" alt="Profile picture of Henry Strait"> 
+    <img src="../images/profiles/22288700.jpg" width="200" alt="Profile of Henry Strait"> 
     <figcaption>Henry Strait</figcaption>
 </figure>
 <dl>
@@ -160,7 +167,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/26322015.jpg" width="200" alt="Profile picture of Elliot Daley"> 
+    <img src="../images/profiles/26322015.jpg" width="200" alt="Profile of Elliot Daley"> 
     <figcaption>Elliot Daley</figcaption>
 </figure>
 <dl>
@@ -172,7 +179,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/21147174.jpg" width="200" alt="Profile picture of Marlowe Hartnett"> 
+    <img src="../images/profiles/21147174.jpg" width="200" alt="Profile of Marlowe Hartnett"> 
     <figcaption>Marlowe Hartnett</figcaption>
 </figure>
 <dl>
@@ -184,7 +191,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/26322046.jpg" width="200" alt="Profile picture of Jackson Cichewicz"> 
+    <img src="../images/profiles/26322046.jpg" width="200" alt="Profile of Jackson Cichewicz"> 
     <figcaption>Jackson Cichewicz</figcaption>
 </figure>
 <dl>
@@ -196,7 +203,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/21147172.jpg" width="200" alt="Profile picture of Micah Winchell"> 
+    <img src="../images/profiles/21147172.jpg" width="200" alt="Profile of Micah Winchell"> 
     <figcaption>Micah Winchell</figcaption>
 </figure>
 <dl>
@@ -208,7 +215,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/26322025.jpg" width="200" alt="Profile picture of Emmett Strait"> 
+    <img src="../images/profiles/26322025.jpg" width="200" alt="Profile of Emmett Strait"> 
     <figcaption>Emmett Strait</figcaption>
 </figure>
 <dl>
@@ -220,7 +227,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23636797.jpg" width="200" alt="Profile picture of Phylip Elliott"> 
+    <img src="../images/profiles/23636797.jpg" width="200" alt="Profile of Phylip Elliott"> 
     <figcaption>Phylip Elliott</figcaption>
 </figure>
 <dl>
@@ -232,7 +239,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/26460401.jpg" width="200" alt="Profile picture of Leo Chi"> 
+    <img src="../images/profiles/26460401.jpg" width="200" alt="Profile of Leo Chi"> 
     <figcaption>Leo Chi</figcaption>
 </figure>
 <dl>
@@ -244,7 +251,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23349703.jpg" width="200" alt="Profile picture of Ethan Miller"> 
+    <img src="../images/profiles/23349703.jpg" width="200" alt="Profile of Ethan Miller"> 
     <figcaption>Ethan Miller</figcaption>
 </figure>
 <dl>
@@ -256,7 +263,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/23349716.jpg" width="200" alt="Profile picture of Jude Shafer"> 
+    <img src="../images/profiles/23349716.jpg" width="200" alt="Profile of Jude Shafer"> 
     <figcaption>Jude Shafer</figcaption>
 </figure>
 <dl>
@@ -268,7 +275,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/26322018.jpg" width="200" alt="Profile picture of Cole Harms"> 
+    <img src="../images/profiles/26322018.jpg" width="200" alt="Profile of Cole Harms"> 
     <figcaption>Cole Harms</figcaption>
 </figure>
 <dl>
@@ -280,7 +287,7 @@
 
 <div class="athlete-id" tabindex = "0">
 <figure> 
-    <img src="../images/profiles/26460414.jpg" width="200" alt="Profile picture of Caspian Ruiz"> 
+    <img src="../images/profiles/26460414.jpg" width="200" alt="Profile of Caspian Ruiz"> 
     <figcaption>Caspian Ruiz</figcaption>
 </figure>
 <dl>
@@ -293,31 +300,31 @@
         </section>
         <section id = "gallery">
             <h2>Gallery</h2>
-         <a href=../images/meets/235827/IMG_9037.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9037.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9033.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9033.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_8973.jpg target = "_blank"> <img src=../images/meets/235827/IMG_8973.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9051.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9051.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9045.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9045.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9024.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9024.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9022.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9022.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_20240829_171701146.jpg target = "_blank"> <img src=../images/meets/235827/IMG_20240829_171701146.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9050.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9050.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_8974.jpg target = "_blank"> <img src=../images/meets/235827/IMG_8974.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9038.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9038.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_20240829_171709091.jpg target = "_blank"> <img src=../images/meets/235827/IMG_20240829_171709091.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9019.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9019.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_20240829_171731303.jpg target = "_blank"> <img src=../images/meets/235827/IMG_20240829_171731303.jpg width = "200" alt="meet activities"></a>
+         <a href=../images/meets/235827/IMG_9049.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9049.jpg width = "200" alt="meet activities"></a>
  <a href=../images/meets/235827/IMG_9035.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9035.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9034.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9034.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9049.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9049.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_8984.jpg target = "_blank"> <img src=../images/meets/235827/IMG_8984.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9032.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9032.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9025.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9025.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9043.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9043.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_20240829_171731303.jpg target = "_blank"> <img src=../images/meets/235827/IMG_20240829_171731303.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9026.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9026.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9024.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9024.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9039.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9039.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9022.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9022.jpg width = "200" alt="meet activities"></a>
  <a href=../images/meets/235827/IMG_9018.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9018.jpg width = "200" alt="meet activities"></a>
- <a href=../images/meets/235827/IMG_9031.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9031.jpg width = "200" alt="meet activities"></a>
  <a href=../images/meets/235827/IMG_9030.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9030.jpg width = "200" alt="meet activities"></a>
  <a href=../images/meets/235827/IMG_9023.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9023.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9031.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9031.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_20240829_171709091.jpg target = "_blank"> <img src=../images/meets/235827/IMG_20240829_171709091.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9034.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9034.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_8973.jpg target = "_blank"> <img src=../images/meets/235827/IMG_8973.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9051.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9051.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_8974.jpg target = "_blank"> <img src=../images/meets/235827/IMG_8974.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9032.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9032.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9036.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9036.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9033.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9033.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9019.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9019.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_8984.jpg target = "_blank"> <img src=../images/meets/235827/IMG_8984.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9050.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9050.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9038.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9038.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_9043.jpg target = "_blank"> <img src=../images/meets/235827/IMG_9043.jpg width = "200" alt="meet activities"></a>
+ <a href=../images/meets/235827/IMG_20240829_171701146.jpg target = "_blank"> <img src=../images/meets/235827/IMG_20240829_171701146.jpg width = "200" alt="meet activities"></a>
         </section>
    </main>   
    <footer>
