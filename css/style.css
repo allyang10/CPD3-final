@@ -81,11 +81,6 @@ h1, h2{
   border-collapse: collapse;
 }
 
-/* make table scrollable */
-#team-results-table{
-  max-height: 200px;
-}
-
 
 /* center the text in the table */
 tr:nth-child(even){
@@ -110,6 +105,7 @@ tr:nth-child(even){
   outline: none;
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: rotateY(10deg) rotateX(10deg);
 }
 
 /* Style the individual results */
@@ -175,7 +171,10 @@ dl {
 }
 
 /* Focus state for links and buttons */
-a:focus{
+a:focus
+a:hover
+button:hover
+button:focus{
   outline: 3px solid rgb(255, 255, 255); /* Dashed outline for visibility */
   outline-offset: 5px; /* Space between outline and element */
   background-color: rgba(0, 123, 255, 0.1); /* Subtle background highlight */
@@ -188,12 +187,7 @@ a:focus{
   transform: scale(1.5); /* Makes the image 2.5x bigger on hover */
 }
 
-/* Hover state to complement focus */
-a:hover {
-  background-color: rgba(0, 123, 255, 0.1); /* Add hover effect */
-}
-
-/* Dark Mode Styling */
+/* Overall Dark Mode Styling */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -204,7 +198,7 @@ body.dark-mode .athlete-id {
   background-color: #333333;
 }
 
-/* Dark mode eam results */
+/* Dark mode mode results */
 body.dark-mode table {
   background-color: #7076a8;
   color: #e0e0e0;
@@ -223,12 +217,11 @@ body.dark-mode nav ul{
 
 /* Dark mode focus and hover states */
 body.dark-mode a:hover,
-body.dark-mode a:focus {
-  transform: scale(1.05);
+body.dark-mode a:focus,
+body.dark-mode button:focus
+body.dark-mode button:hover{
   background-color: rgb(157, 157, 157);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Slight glow effect */
-  outline: none;
-}
+} 
 
 
 /* Tablet styles */
