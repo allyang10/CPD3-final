@@ -12,10 +12,15 @@
 /* link button styles */
 nav ul{
   display: flex;
-  flex-direction: column; /*make the buttons in a column so they are big enough
+  /* flex-direction: column; /*make the buttons in a column so they are big enough */
   list-style-type: none; /* Remove bullet points */
   background-color: rgb(179, 223, 223);
   border: 2px black;
+}
+
+/* home page styling */
+#meet-list a {
+  display: block; /* Make each link occupy a full row */
 }
 
 /* Button styling */
