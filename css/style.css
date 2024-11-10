@@ -20,6 +20,9 @@ nav ul{
 /* home page styling */
 #meet-list a {
   display: block; /* Make each link occupy a full row */
+  /* make font size smaller so links can be seen */
+  font-size: 75%; 
+  padding: 2%;
 }
 
 a, button {
@@ -48,15 +51,6 @@ h1, h2{
   font-size: 1.5rem;
 }
 
-
-
-#summary p{
-  /* font-size: 2vw; */
-  white-space:normal;
-  overflow: visible;
-  text-align: left;   /* Align text to the left for better readability */
-}
-
 /* make the table flex and style */
 #team-results{
   display: flex;
@@ -67,10 +61,15 @@ h1, h2{
 }
 
 
-/* center the text in the table */
+/* alternating row colors */
 tr:nth-child(even){
   background-color: rgb(27, 38, 114);
   color: white;
+}
+
+tr:nth-child(odd){
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 /* make individual results into a grid */
@@ -79,50 +78,56 @@ tr:nth-child(even){
   flex-wrap: wrap; /* Allow items to wrap onto the next line */
   justify-content: space-between; /* Space items evenly */
   grid-template-columns: 1fr; /* One card per row */
-  transition: opacity 0.6s ease; /* Smooth transition for fade effect */
+  gap: 4px;
+  transition: opacity 1s ease; /* Smooth transition for fade effect */
 }
 
-.card-back{
-  position: absolute; /* Position it over the front */
-  opacity: 0; /* Hide the back initially */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-  display: none; /* Hide the back by default */
+.card-back {
+  position: absolute; /* Position the card back absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset for perfect centering */
+  display: flex; /* Flex layout for dt and dd */
+  flex-direction: column; /* Stack the rows */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  width: 100%; /* Match the parent width */
+  height: 100%; /* Match the parent height */
+  background-color: rgba(255, 255, 255, 0.9); /* Optional: Semi-transparent background */
+  border-radius: 8px; /* Match parent rounded corners */
+  opacity: 0; /* Hidden by default */
+  box-shadow: none; /* Ensure no shadow */
+  z-index: 2; /* Bring the card-back above other content */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
 }
 
-/* hover and focus styling for the athlete cards */
-.athlete-id:hover,
-.athlete-id:focus,
-.card-back{
-  outline: none;
-  display: block; /* Show the back on hover */
-  transform: scale(1.05);
-  top: 40%; /* Align to middle */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.6s ease; /* Smooth transition for fade effect */
+
+.athlete-id {
+  position: relative; /* Ensure positioning context for child elements */
+  perspective: 1000px; /* 3D perspective for flipping effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  background-color: white; /* Solid background */
+  padding: 10px; /* Padding for inner content */
+  font-size: 1.1vw; /* Adjust text size */
 }
 
-/* Show the back on hover or focus */
+.athlete-id figure {
+  position: relative; /* Ensure figure is part of the stacking context */
+  z-index: 1; /* Keep figure below the card-back */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth fade/flip */
+}
+
 .athlete-id:hover .card-back,
 .athlete-id:focus .card-back {
-    opacity: 1; /* Make it fully visible */
+  opacity: 1; /* Show the card-back */
+  z-index: 2; /* Ensure it's above the figure */
 }
 
 .athlete-id:hover figure,
 .athlete-id:focus figure {
-    opacity: 0; /* Hide the front on hover */
-    transform: rotateY(180deg); /* Rotate the front */
-}
-
-/* Style the individual results */
-.athlete-id {
-  perspective: 1000px; /* Allow for 3D perspective */
-  gap: 1em; /* Add gap between cards */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-  border-radius: 8px; /* Optional rounded corners */
-  background-color: white; /* Ensure a solid background */
-  padding: 10px; /* Add some padding */
-  font-size: 1.1vw;
-  flex: 1 1 calc(100% - 1em); /* two cards per row */
+  opacity: 0; /* Fade out the figure */
+  transform: rotateY(180deg); /* Flip the front */
 }
 
 .athlete-id figure img {
@@ -131,10 +136,11 @@ tr:nth-child(even){
   height: auto; /* Maintain aspect ratio */
 }
 
-dl {
-  display: flex; /* Make the <dl> a flex container */
-  margin: 0 0 0 1em; /* Space on the left of the description list */
+.card-back dt,
+.card-back dd {
+  display: inline; /* Keep <dt> and <dd> on the same line */
 }
+
 
 
 
@@ -234,11 +240,14 @@ body.dark-mode button:hover{
 /* Tablet styles */
 @media (min-width: 600px) {
   h1,h2{
-    font-size: 70%;
+    font-size: 2rem;
   }
 
   a{
-    font-size: 1.5vw; /*bigger*/
+    font-size: 1rem; /*smaller*/
+    /* make each link one line only */
+    white-space: nowrap;
+    
   }
   
   nav ul {
@@ -287,10 +296,14 @@ body.dark-mode button:hover{
 }
 
 /* changes for prefers-reduced-motion */
-@media screen and (prefers-reduced-motion: reduce) {  
-  * {
-    animation-duration: 0.000ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.000ms !important;
+@media screen and (prefers-reduced-motion: reduce) { 
+  .athlete-id:hover figure,
+  .athlete-id:focus figure {
+    opacity: 0; /* Fade out the figure */
+    transform: rotateY(360deg); /* stop the image from inverting */
+  }
+  .athlete-id figure {
+    transform: none; /* Disable flipping */
+    transition: opacity .8s ease-in-out; /* Fade in instead, and a little slwoer */
   }
 }
