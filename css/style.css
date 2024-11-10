@@ -2,9 +2,8 @@
 *{
   margin: .5em; 
   padding: .6em;
-  font-size: 1.vw;
+  font-size: 1rem;
   text-align: center;
-  overflow: scroll;
   white-space: nowrap;
   font-family:'Trebuchet MS', sans-serif;
 }
@@ -12,7 +11,7 @@
 /* link button styles */
 nav ul{
   display: flex;
-  /* flex-direction: column; /*make the buttons in a column so they are big enough */
+  flex-direction: column; /*make the buttons in a column so they are big enough */
   list-style-type: none; /* Remove bullet points */
   background-color: rgb(179, 223, 223);
   border: 2px black;
@@ -29,7 +28,7 @@ button{
   border: black solid 2px;
   border-radius: 5px;
   padding: 1% 4%;
-  font-size: 1.5vw;
+  font-size: 2rem;
 }
 
 a {
@@ -39,7 +38,7 @@ a {
   border: 2px solid;
   border-radius: 5px;
   background-color: rgb(195, 98, 59);
-  font-size: 1.5vw;
+  font-size: 2rem;
 
   /* responsive padding */
   padding: 1% 2%;
@@ -141,7 +140,7 @@ tr:nth-child(even){
   background-color: white; /* Ensure a solid background */
   padding: 10px; /* Add some padding */
   font-size: 1.1vw;
-  flex: 1 1 calc(50% - 1em); /* two cards per row */
+  flex: 1 1 calc(100% - 1em); /* two cards per row */
 }
 
 .athlete-id figure img {
@@ -168,23 +167,6 @@ dl {
   margin-bottom: 20px;  /* Add some space below the title */
   font-size: 2em;       /* Make the title larger */
 }
-
-/* Animate for images */
-#gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  transition: transform 0.3s ease; /* hover animation */
-  object-fit: contain; /* Ensure the entire image is visible */
-  display: block;
-}
-
-/* animation for when hovering */
-#gallery a:hover {
-  transform: scale(1.5); /* Makes the image 2.5x bigger on hover */
-}
-
-
 
 /* Exclude links in the gallery */
 #gallery a {
@@ -248,6 +230,24 @@ body.dark-mode button:hover{
   background-color: rgb(157, 157, 157);
 } 
 
+/* ----------------Animations----------------*/
+
+/* Animate for images */
+#gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* hover animation */
+  object-fit: contain; /* Ensure the entire image is visible */
+  display: block;
+}
+
+/* animation for when hovering */
+#gallery a:hover {
+  transform: scale(1.5); /* Makes the image 2.5x bigger on hover */
+}
+
+/* ^-----------------Animations-----------^ */
 
 /* Tablet styles */
 @media (min-width: 600px) {
@@ -271,7 +271,7 @@ body.dark-mode button:hover{
   .athlete-id {
     max-width: 50%;
     font-size: .5em;
-    flex: 1 1 calc(33.33% - 1em); /* Three cards per row */
+    flex: 1 1 calc(50% - 1em); /* two cards per row */
   }
 
   dl{
@@ -304,6 +304,7 @@ body.dark-mode button:hover{
 
   .athlete-id {
     font-size: 2vw;
+    flex: 1 1 calc(33.33% - 1em); /* Three cards per row */
   }
 }
 

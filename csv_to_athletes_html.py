@@ -153,6 +153,7 @@ def gen_athlete_page(data, outfile):
 
                      </footer>
                </body>
+               
          </html>
    '''
 

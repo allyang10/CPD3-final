@@ -138,6 +138,7 @@ def csv_to_html(csv_filename, output_folder):
 
                      </footer>
         </body>
+        <script src = "../js/javascript.js"></script>
 </html>
 """
         import re
