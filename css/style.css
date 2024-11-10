@@ -1,10 +1,9 @@
 /* Default styles */
 *{
-  margin: .5em; 
-  padding: .6em;
-  font-size: 1rem;
+  margin: 0em; 
+  padding: .5em;
+  font-size: .8rem;
   text-align: center;
-  white-space: nowrap;
   font-family:'Trebuchet MS', sans-serif;
 }
 
@@ -13,7 +12,7 @@ nav ul{
   display: flex;
   flex-direction: column; /*make the buttons in a column so they are big enough */
   list-style-type: none; /* Remove bullet points */
-  background-color: rgb(179, 223, 223);
+  background-color: rgb(215, 234, 255);
   border: 2px black;
 }
 
@@ -24,24 +23,25 @@ nav ul{
 
 /* Button styling */
 button{
-  background-color: rgb(195, 98, 59);
+  background-color: rgb(27, 38, 114);
+  color:#ffffff;
   border: black solid 2px;
   border-radius: 5px;
   padding: 1% 4%;
   font-size: 2rem;
 }
 
-a {
-  color: black;
+a, button {
+  background-color: rgb(27, 38, 114);
+  color: white;
   text-decoration:none;
   box-shadow: 2px 8px rgba(0, 0, 0, 0.2);
   border: 2px solid;
   border-radius: 5px;
-  background-color: rgb(195, 98, 59);
-  font-size: 2rem;
+  font-size: 1.7rem;
 
   /* responsive padding */
-  padding: 1% 2%;
+  padding: 1% 1%;
   margin: 1%;
   display: inline-block; /* Ensure it only takes up space for content */
 }
@@ -251,10 +251,6 @@ body.dark-mode button:hover{
 
 /* Tablet styles */
 @media (min-width: 600px) {
-  *{
-    font-size: 100%; /*max font size */
-  }
-
   h1,h2{
     font-size: 70%;
   }
