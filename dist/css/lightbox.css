@@ -1,8 +1,13 @@
+
 body.lb-disable-scrolling {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
 .lightboxOverlay {
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,6 +19,8 @@ body.lb-disable-scrolling {
 }
 
 .lightbox {
+  margin: 0;
+  padding: 0;
   position: absolute;
   left: 0;
   width: 100%;
@@ -26,6 +33,7 @@ body.lb-disable-scrolling {
 }
 
 .lightbox .lb-image {
+  position: absolute;
   display: block;
   height: auto;
   max-width: inherit;
@@ -50,13 +58,14 @@ body.lb-disable-scrolling {
 
   /* Background color behind image.
      This is visible during transitions. */
-  background-color: white;
+  /* background-color: white; */
 }
 
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
+  position: absolute;
 }
 
 .lb-loader {
@@ -96,9 +105,11 @@ body.lb-disable-scrolling {
 }
 
 .lb-prev, .lb-next {
+  border: none;
   height: 100%;
   cursor: pointer;
   display: block;
+  position: absolute;
 }
 
 .lb-nav a.lb-prev {
@@ -206,53 +217,8 @@ body.lb-disable-scrolling {
 
 @media screen and (prefers-reduced-motion: reduce) { 
   @media (prefers-reduced-motion: reduce) {
-    /* Disable transitions for general elements */
-    .lightboxOverlay {
-      transition: none;
-    }
-  
-    .lightbox {
-      transition: none;
-    }
-  
-    .lightbox .lb-image {
-      transition: none;
-    }
-  
-    .lb-outerContainer {
-      transition: none;
-    }
-  
     .lb-loader {
-      transition: none;
-    }
-  
-    .lb-cancel {
-      transition: none;
-    }
-  
-    .lb-nav {
-      transition: none;
-    }
-  
-    .lb-nav a.lb-prev,
-    .lb-nav a.lb-next {
-      transition: none;
-      opacity: 1; /* Make them fully visible without transition */
-    }
-  
-    .lb-nav a.lb-prev:hover,
-    .lb-nav a.lb-next:hover {
-      opacity: 1; /* Keep the hover state without transition */
-    }
-  
-    .lb-data .lb-close {
-      transition: none;
-      opacity: 1; /* Make close button fully visible without transition */
-    }
-  
-    .lb-data .lb-close:hover {
-      opacity: 1; /* Keep hover state without transition */
+      opacity: 0;
     }
   }
 }

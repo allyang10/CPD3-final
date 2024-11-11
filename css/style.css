@@ -142,7 +142,7 @@ tr:nth-child(odd){
 
 #gallery{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
 }
 
@@ -197,6 +197,10 @@ body.dark-mode table {
   width: 100%;
   color: black;
 }
+body.dark-mode tr:nth-child(odd) {
+  background-color: rgb(71, 71, 71);
+  color: white;
+}
 
 body.dark-mode #team-results{
   background-color: #333333;
@@ -217,7 +221,7 @@ body.dark-mode button:hover{
 /* ----------------Animations----------------*/
 
 /* Animate for images */
-#gallery img {
+#gallery img{
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -277,6 +281,9 @@ body.dark-mode button:hover{
 }
 /* Desktop styles */
 @media (min-width: 900px) {
+  *{
+    padding: 1em;
+  }
 
   h1 {
     font-size: 2em;
@@ -286,7 +293,7 @@ body.dark-mode button:hover{
     font-size: 2em;
   }
 
-  /* make the buttons smaller so they fit the screen */
+  /* make the buttons bigger so they fit the screen */
   nav ul a{
     margin: 0 1em;
     font-size: 1em;
