@@ -31,6 +31,7 @@ def csv_to_html(csv_filename, output_folder):
 <title>{link_text}</title>
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/style.css">
+<link href="../dist/css/lightbox.css" rel="stylesheet" />
 </head>
    <body>
    <a href = "#main">Skip to Main Content</a>
@@ -139,6 +140,7 @@ def csv_to_html(csv_filename, output_folder):
                      </footer>
         </body>
         <script src = "../js/javascript.js"></script>
+        <script src="../dist/js/lightbox-plus-jquery.js"></script>
 </html>
 """
         import re
@@ -210,7 +212,7 @@ def generate_image_tags(image_files, folder_path):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f' <a href=../{img_path} target = "_blank"> <img src=../{img_path} width = "200" alt="meet activities"></a>' )
+        img_tags.append(f' <a href=../{img_path} target = "_blank" data-lightbox = "gallery_image"> <img src=../{img_path} width = "200" alt="gallery"></a>' )
     return "\n".join(img_tags)
 
 # Putting it all together

@@ -78,7 +78,7 @@ tr:nth-child(odd){
   flex-wrap: wrap; /* Allow items to wrap onto the next line */
   justify-content: space-between; /* Space items evenly */
   grid-template-columns: 1fr; /* One card per row */
-  gap: 4px;
+  gap: 8px;
   transition: opacity 1s ease; /* Smooth transition for fade effect */
 }
 
@@ -88,15 +88,11 @@ tr:nth-child(odd){
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Offset for perfect centering */
   display: flex; /* Flex layout for dt and dd */
-  flex-direction: column; /* Stack the rows */
-  align-items: center; /* Center content horizontally */
+  align-items: center;
   justify-content: center; /* Center content vertically */
   width: 100%; /* Match the parent width */
   height: 100%; /* Match the parent height */
-  background-color: rgba(255, 255, 255, 0.9); /* Optional: Semi-transparent background */
-  border-radius: 8px; /* Match parent rounded corners */
   opacity: 0; /* Hidden by default */
-  box-shadow: none; /* Ensure no shadow */
   z-index: 2; /* Bring the card-back above other content */
   transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
 }
@@ -133,7 +129,7 @@ tr:nth-child(odd){
 .athlete-id figure img {
   max-width: 100%; /* Allow image to scale within its container */
   width: 150%; /* Default size on larger screens */
-  height: auto; /* Maintain aspect ratio */
+  height: auto; 
 }
 
 .card-back dt,
@@ -247,7 +243,14 @@ body.dark-mode button:hover{
     font-size: 1rem; /*smaller*/
     /* make each link one line only */
     white-space: nowrap;
-    
+  }
+
+  /* home page styling */
+  #meet-list a {
+    display: block; /* Make each link occupy a full row */
+    /* make font size smaller so links can be seen */
+    font-size: 1rem; 
+    padding: 2%;
   }
   
   nav ul {
@@ -304,6 +307,6 @@ body.dark-mode button:hover{
   }
   .athlete-id figure {
     transform: none; /* Disable flipping */
-    transition: opacity .8s ease-in-out; /* Fade in instead, and a little slwoer */
+    transition: opacity .8s ease-in-out; /* Fade in instead, and a little slower */
   }
 }
