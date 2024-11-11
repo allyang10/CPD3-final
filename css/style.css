@@ -239,13 +239,10 @@ body.dark-mode button:hover{
 
 /* Tablet styles */
 @media (min-width: 600px) {
-  h1,h2{
-    font-size: 2rem;
-  }
 
   a{
+    padding: .9rem;
     font-size: 1rem; /*smaller*/
-    /* make each link one line only */
     white-space: nowrap;
   }
 
@@ -268,9 +265,6 @@ body.dark-mode button:hover{
     flex: 1 1 calc(50% - 1em); /* two cards per row */
   }
 
-  dl{
-   font-size: .5em;
-  }
 
   .athlete-id figure img {
     max-width: 80%; /* Allow image to scale within its container */
@@ -285,18 +279,9 @@ body.dark-mode button:hover{
     padding: 1em;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
   /* make the buttons bigger so they fit the screen */
   nav ul a{
-    margin: 0 1em;
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .athlete-id {
