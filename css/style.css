@@ -148,8 +148,6 @@ tr:nth-child(odd){
 
 #gallery h2 {
   grid-column: 1 / -1;  /* Make the title span across all columns */
-  margin-bottom: 20px;  /* Add some space below the title */
-  font-size: 2em;       /* Make the title larger */
 }
 
 /* Exclude links in the gallery */
@@ -159,17 +157,16 @@ tr:nth-child(odd){
   background-color: transparent; /* Remove background */
   color: inherit; /* Use inherited color */
   text-decoration: none; /* Ensure no underline */
-}
+} 
 
-/* Focus state for links and buttons */
-a:focus
-a:hover
-button:hover
+/* Focus state for links and buttons */ 
+a:focus,
+a:hover,
+button:hover,
 button:focus{
-  outline: 3px solid rgb(255, 255, 255); /* Dashed outline for visibility */
+  outline: 3px solid rgb(69, 87, 255); /* Dashed outline for visibility */
   outline-offset: 5px; /* Space between outline and element */
-  background-color: rgba(0, 123, 255, 0.1); /* Subtle background highlight */
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Soft glow effect */
+  background-color: rgba(53, 145, 232, 0.651); /* Subtle background highlight */
 }
 
 /* Focus state for gallery images */
@@ -239,6 +236,10 @@ body.dark-mode button:hover{
 
 /* Tablet styles */
 @media (min-width: 600px) {
+  /* bigger margin */
+  body{
+    margin: 2rem;
+  }
 
   a{
     padding: .9rem;
@@ -275,9 +276,6 @@ body.dark-mode button:hover{
 }
 /* Desktop styles */
 @media (min-width: 900px) {
-  *{
-    padding: 1em;
-  }
 
   /* make the buttons bigger so they fit the screen */
   nav ul a{
